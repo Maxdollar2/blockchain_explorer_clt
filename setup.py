@@ -1,9 +1,12 @@
 from setuptools import setup, find_packages
 
+#python3 setup.py sdist bdist_wheel
+#twine upload dist/blockcat-0.0.1*
 
-VERSION = '0.0.1'
 
-setup(name='blockchain_explorer_clt',
+VERSION = '0.4.3'
+
+setup(name='blockcat',
       version=VERSION,
       description="a tiny blockchain explorer supporting different blockchains",
       long_description='just enjoy',
@@ -16,12 +19,9 @@ setup(name='blockchain_explorer_clt',
       packages=find_packages(),
       include_package_data=True,
       zip_safe=True,
-      install_requires=[
-                        'requests',
-                        ],
       entry_points={
       'console_scripts':[
-                         'blockchain_explorer_clt = blockchain_explorer_clt.explore.argparse:main'
+                         'blockcat = blockcat.input:main'
                          ]
       },
       )
